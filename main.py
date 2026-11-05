@@ -1,25 +1,35 @@
-from english_words import get_english_words_set
-
-from turn_actions import letter_in_position, letter_not_in_word, letter_in_word
+from game_actions import letter_in_position, letter_not_in_word, letter_in_word, setup_game, get_valid_words, \
+    get_game_words
 
 if __name__ == '__main__':
-    valid_words = {w.lower() for w in get_english_words_set(['web2'], lower=True) if len(w) == 5 and w.isalpha()}
-    print(f"Generated {len(valid_words)} valid 5-letter words from the English words set.")
+    setup_game()
+
+    print('tails' in get_valid_words())
+    print('rails' in get_valid_words())
+    print('fails' in get_valid_words())
 
     # EXAMPLE OF GAME
-    valid_words = letter_not_in_word('d', valid_words)
-    valid_words = letter_not_in_word('e', valid_words)
-    valid_words = letter_not_in_word('a', valid_words)
-    valid_words = letter_in_position('t', 4, valid_words)
-    valid_words = letter_not_in_word('h', valid_words)
+    letter_not_in_word('b')
+    letter_not_in_word('o')
+    letter_not_in_word('w')
+    letter_not_in_word('e')
+    letter_not_in_word('l')
 
-    valid_words = letter_not_in_word('b', valid_words)
-    valid_words = letter_not_in_word('o', valid_words)
-    valid_words = letter_not_in_word('l', valid_words)
-    valid_words = letter_not_in_word('s', valid_words)
+    letter_not_in_word('d')
+    letter_in_word('r', 2)
+    letter_in_word('a', 3)
+    letter_not_in_word('i')
+    letter_not_in_word('n')
 
-    valid_words = letter_not_in_word('r', valid_words)
-    valid_words = letter_in_position('u', 2, valid_words)
-    valid_words = letter_in_word('n', 3, valid_words)
-    valid_words = letter_in_position('y', 5, valid_words)
-    print(f"After applying the game rules, {len(valid_words)} valid words remain: {valid_words}")
+    letter_in_word('r', 1)
+    letter_in_position('a', 2)
+    letter_not_in_word('m')
+    letter_in_word('p', 4)
+    letter_not_in_word('s')
+
+    letter_in_position('p', 1)
+    letter_in_position('a', 2)
+    letter_in_position('r', 3)
+    letter_not_in_word('k')
+    letter_not_in_word('y')
+    print(f"After applying the game rules, {len(get_game_words())} valid words remain: {get_game_words()}")
