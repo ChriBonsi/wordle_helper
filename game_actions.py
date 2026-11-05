@@ -46,7 +46,9 @@ def allowed(word):
 
 
 def missing_words():
-    return ['balls', 'ramps', 'sails', 'nails', 'mails', 'boils', 'files', 'pails', 'rails', 'fails', 'tails']
+    return ['balls', 'ramps', 'sails', 'nails', 'mails', 'boils', 'files', 'pails', 'rails', 'fails', 'tails', 'bails',
+            'boats', 'hails', 'jails', 'wails', 'quads', 'waves', 'sings', 'bells', 'cells', 'dells', 'hells', 'yells',
+            'sells', 'bounds', 'hounds', 'mounds', 'pounds', 'rounds', 'sounds', 'wounds']
 
 
 def get_valid_words():

@@ -4,9 +4,16 @@ from game_actions import letter_in_position, letter_not_in_word, letter_in_word,
 if __name__ == '__main__':
     setup_game()
 
-    print('tails' in get_valid_words())
-    print('rails' in get_valid_words())
-    print('fails' in get_valid_words())
+    to_test = ['quads', 'balls', 'mails', 'waves', 'sings', 'bells', 'cells', 'dells', 'hells', 'yells', 'sells',
+               'bounds', 'hounds', 'mounds', 'pounds', 'rounds', 'sounds', 'wounds']
+    tested = []
+    for word in to_test:
+        if word in get_valid_words():
+            print(f"{word} TRUE")
+        else:
+            print(f"{word} FALSE")
+            tested.append(word)
+    print(tested)
 
     # EXAMPLE OF GAME
     letter_not_in_word('b')
