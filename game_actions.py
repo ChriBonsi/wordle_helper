@@ -38,7 +38,7 @@ def letter_in_position(letter, position):
 
 
 def allowed(word):
-    forbidden_words = []
+    forbidden_words = ['bruce', 'nelly']
     if word in forbidden_words:
         return False
     else:
@@ -46,9 +46,20 @@ def allowed(word):
 
 
 def missing_words():
-    return ['balls', 'ramps', 'sails', 'nails', 'mails', 'boils', 'files', 'pails', 'rails', 'fails', 'tails', 'bails',
-            'boats', 'hails', 'jails', 'wails', 'quads', 'waves', 'sings', 'bells', 'cells', 'dells', 'hells', 'yells',
-            'sells', 'bounds', 'hounds', 'mounds', 'pounds', 'rounds', 'sounds', 'wounds']
+    return ['dreck', 'balls', 'ramps', 'sails', 'nails', 'mails', 'boils', 'files', 'pails', 'rails', 'fails', 'tails',
+            'bails', 'boats', 'hails', 'jails', 'wails', 'quads', 'waves', 'sings', 'bells', 'cells', 'dells', 'hells',
+            'yells', 'sells', 'bounds', 'hounds', 'mounds', 'pounds', 'rounds', 'sounds', 'wounds']
+
+
+def test_words(words):
+    tested = []
+    for word in words:
+        if word in get_valid_words():
+            print(f"{word} TRUE")
+        else:
+            print(f"{word} FALSE")
+            tested.append(word)
+    print(tested)
 
 
 def get_valid_words():
