@@ -38,28 +38,20 @@ def letter_in_position(letter, position):
 
 
 def allowed(word):
-    forbidden_words = ['bruce', 'nelly']
-    if word in forbidden_words:
+    forbidden_words = ['aimee', 'jason', 'jerry', 'josef', 'jules', 'julie', 'julio', 'peter', 'laura', 'swans',
+                       'blows', 'flows', 'paolo', 'claws', 'swaps', 'josie', 'james', 'swabs', 'nelly', 'tones',
+                       'bruce', 'zones', 'paula', 'mindy', 'flaws', 'josey', 'paola', 'snows', 'glows', 'bones',
+                       'grows', 'draws', 'klaus']
+    if word in set(forbidden_words):
         return False
     else:
         return True
 
 
 def missing_words():
-    return ['dreck', 'balls', 'ramps', 'sails', 'nails', 'mails', 'boils', 'files', 'pails', 'rails', 'fails', 'tails',
-            'bails', 'boats', 'hails', 'jails', 'wails', 'quads', 'waves', 'sings', 'bells', 'cells', 'dells', 'hells',
-            'yells', 'sells', 'bounds', 'hounds', 'mounds', 'pounds', 'rounds', 'sounds', 'wounds']
-
-
-def test_words(words):
-    tested = []
-    for word in words:
-        if word in get_valid_words():
-            print(f"{word} TRUE")
-        else:
-            print(f"{word} FALSE")
-            tested.append(word)
-    print(tested)
+    return ['plays', 'cries', 'dreck', 'balls', 'ramps', 'sails', 'nails', 'mails', 'boils', 'files', 'pails', 'rails',
+            'fails', 'tails', 'bails', 'boats', 'hails', 'jails', 'wails', 'quads', 'waves', 'sings', 'bells', 'cells',
+            'dells', 'hells', 'yells', 'sells', 'bounds', 'hounds', 'mounds', 'pounds', 'rounds', 'sounds', 'wounds']
 
 
 def get_valid_words():
