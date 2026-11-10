@@ -16,8 +16,8 @@ def starting_word_ideas(vowel_number, all_diffent_letters=True):
                     suggestions.append(word)
             else:
                 suggestions.append(word)
-
-    print(set(suggestions))
+    if len(set(suggestions)) > 0:
+        print(set(suggestions))
 
 
 def test_words(words):
@@ -28,4 +28,5 @@ def test_words(words):
         else:
             print(f"{word} FALSE")
             tested.append(word)
-    print(set(tested))
+    if len(set(tested)) > 0:
+        print(set(tested))

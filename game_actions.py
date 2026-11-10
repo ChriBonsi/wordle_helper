@@ -41,7 +41,7 @@ def allowed(word):
     forbidden_words = ['aimee', 'jason', 'jerry', 'josef', 'jules', 'julie', 'julio', 'peter', 'laura', 'swans',
                        'blows', 'flows', 'paolo', 'claws', 'swaps', 'josie', 'james', 'swabs', 'nelly', 'tones',
                        'bruce', 'zones', 'paula', 'mindy', 'flaws', 'josey', 'paola', 'snows', 'glows', 'bones',
-                       'grows', 'draws', 'klaus']
+                       'grows', 'draws', 'klaus', 'delia', 'diego', 'erica', 'erika', 'sarah', 'alice', 'louie']
     if word in set(forbidden_words):
         return False
     else:
